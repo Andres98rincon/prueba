@@ -17,7 +17,7 @@ class requestmiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-       if ($request->post('created_at')) {
+       if ($request->post('fecha_publicacion')) {
            $data= request('fecha_publicacion');
            Peticion::create([
                'fecha' => $data,
